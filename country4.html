@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/general.css">
+<link rel="stylesheet" type="text/css" href="styles/country4.css">
+<meta content="width=device-width, initial-scale=1" name="screen" />
+<title> ChartR </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/transitionToPage.js"></script>
+<script src="scripts/transitionToCountry.js"></script>
+</head>
+
+<body>
+    
+    <main class="outerContainer">
+        <header>
+    
+            <div class="mobile">
+            <div class="mobileFlex">
+                <img src="imagini/burger2.png" class="burger" onclick="showMenu()">
+                <span onclick="transitionToPage('home.html')">Home</span>
+                <span onclick="transitionToPage('country5.html')">Learn</span>
+                <span onclick="transitionToPage('country1.html')">Explore</span>
+                <span onclick="transitionToPage('country2.html')">Compare</span>
+                <span onclick="transitionToPage('country4.html')">Currency</span>
+                <span onclick="transitionToPage('country3.html')">Metro</span>
+            </div>
+            </div>
+    
+            <div class="desktop">
+            <span onclick="transitionToPage('home.html')" class="home">Home</span>
+            <span onclick="transitionToPage('country5.html')" class="learn">Learn</span>
+            <span onclick="transitionToPage('country1.html')" class="explore">Explore</span>
+            <span onclick="transitionToPage('country2.html')" class="compare">Compare</span>
+            <span onclick="transitionToPage('country4.html')" class="currency">Currency</span>
+            <span onclick="transitionToPage('country3.html')" class="metro">Metro</span>
+            </div>
+        </header>
+    
+    <section class="topOfCmp">
+        <form id="cmpForm">
+            <h1>Select two currencies to compare</h1>
+            <select name="cmp1" id="cmp1">
+                <option value="">Plese choose an option</option>
+                <option value="629">Bulgarian Lev</option>
+                <option value="659">Croatian Kuna</option>
+                <option value="645">Czech Krouna</option>
+                <option value="9">Danish Krone</option>
+                <option value="661">Hungarian Forint</option>
+                <option value="704">Polish Zolty</option>
+                <option value="707">Romanian Leu</option>
+                <option value="68">Sweedish Krona</option>
+            </select>
+            <select name="cmp2" id="cmp2">
+                <option value="">Plese choose an option</option>
+                <option value="629">Bulgarian Lev</option>
+                <option value="659">Croatian Kuna</option>
+                <option value="645">Czech Krouna</option>
+                <option value="9">Danish Krone</option>
+                <option value="661">Hungarian Forint</option>
+                <option value="704">Polish Zolty</option>
+                <option value="707">Romanian Leu</option>
+                <option value="68">Sweedish Krona</option>
+            </select>
+            <button id="plotBtn" onclick="getData()" type="button">Search</button>
+        </form>
+        
+        <div class="currentValuesChart">
+            <canvas id="currentCmpChart" width="500vw" height="200vh"></canvas>
+        </div>
+       </section>
+
+        <div id="graphDiv">
+            <canvas style="margin-left: 7vw;" id="CmpChart" width="225" height="75vh"></canvas>
+        </div>
+    
+    <p id="notePar">Note: All currencies are compared using their values in regard to euro.</p>
+    
+    <footer>
+        <div class="footer"> ChartR team [Sale Razvan-Stelian & Andrei Grigor] @ 2021</div>
+    </footer>
+</main>
+
+<script type="text/javascript" src="./scripts/forexReq.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>markActive("currency");</script>
+</body>
+</html>

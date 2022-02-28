@@ -1,0 +1,100 @@
+:root {
+  --usedFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 85%;
+}
+
+.flexText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30vw;
+}
+
+.flexMap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+h2 {
+  font-family: var(--usedFont);
+  font-size: 2.5vh;
+  text-align: center;
+  color: firebrick;
+}
+
+h3 {
+  font-family: var(--usedFont);
+  font-size: 1.75vh;
+  text-align: center;
+  color: firebrick;
+}
+
+p {
+  font-family: var(--usedFont);
+  font-weight: normal;
+  font-size: 1.4vh;
+  text-align: justify;
+}
+
+#citiesDiv:hover {
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4), 0 20px 60px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .outerContainer {
+    height: 95%;
+    width: 95%;
+  }
+  .flexRow {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 1.75vh;
+  }
+  h3 {
+    font-size: 1.5vh;
+  }
+  p {
+    font-size: 1.25vh;
+  }
+  .flexMap {
+    width: auto;
+  }
+  header .mobileFlex {
+    height: 95vh;
+  }
+  .flexText {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+  .outerContainer {
+    height: 65%;
+  }
+  .flexRow {
+    height: 90%;
+  }
+  h2 {
+    font-size: 1.75vh;
+  }
+  h3 {
+    font-size: 1.5vh;
+  }
+  p {
+    font-size: 1.25vh;
+  }
+}

@@ -1,0 +1,216 @@
+:root {
+  --usedFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.outerContainer {
+  height: 70%;
+  width: 70%;
+}
+
+.flexRow1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10vh;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: var(--usedFont);
+  font-size: 2vh;
+  color: firebrick;
+  text-align: center;
+}
+
+#country1,
+#country2 {
+  font-family: var(--usedFont);
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.75vh;
+  text-align: center;
+  outline: 0.2vh solid black;
+}
+
+#country1:hover,
+#country2:hover {
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4), 0 20px 60px 0 rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+#compareButton {
+  text-align: center;
+  font-size: 1.5vh;
+  padding: 1.75vh 2vw;
+  border-radius: 10%;
+  border: 0.225vh solid black;
+  margin-top: 15%;
+  font-family: var(--usedFont);
+}
+
+#compareButton:hover {
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4), 0 20px 60px 0 rgba(0, 0, 0, 0.4);
+  color: white;
+  background-color: royalblue;
+  transition: 0.5s;
+}
+
+.arrow {
+  width: 2.25vw;
+  height: auto;
+  align-self: center;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  transform: scale(1.25);
+  transition: 0.5s;
+}
+
+.firstComparison {
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.secondComparison,
+.thirdComparison,
+.fourthComparison {
+  height: 80%;
+  opacity: 0;
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.radarChart {
+  width: 27.5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .outerContainer {
+    height: 85%;
+    width: 80%;
+  }
+
+  h2 {
+    font-size: 1.75vh;
+  }
+
+  .firstComparison {
+    height: 100%;
+  }
+
+  .flexRow1 {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .arrow {
+    width: 6vw;
+    height: auto;
+  }
+
+  #compareButton {
+    font-size: 1.2vh;
+    padding: 1vh 2vw;
+    margin-top: 10%;
+  }
+
+  #country1,
+  #country2 {
+    font-size: 1.25vh;
+    width: 22.5vw;
+    height: 4.5vh;
+  }
+
+  .radarChart {
+    width: 65vw;
+  }
+
+  .cmpDiv {
+    width: 65vw;
+  }
+
+  .secondComparison,
+  .thirdComparison,
+  .fourthComparison {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .outerContainer {
+    width: 90%;
+  }
+
+  .flexRow1 {
+    gap: 6vw;
+  }
+
+  .radarChart {
+    width: 40vw;
+  }
+  #country1,
+  #country2 {
+    font-size: 1.2vh;
+    width: 15vh;
+    height: 4vw;
+  }
+  .arrow {
+    width: 5vw;
+    height: auto;
+  }
+  .cmpDiv {
+    width: 100%;
+  }
+}
+
+/*Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1440px) {
+  .outerContainer {
+    height: 65%;
+  }
+  .radarChart {
+    width: 30vw;
+  }
+  .flexRow1 {
+    gap: 5vh;
+  }
+  #country1,
+  #country2 {
+    width: 15vw;
+    height: 5vh;
+    font-size: 1.75vh;
+  }
+  .arrow {
+    width: 3vw;
+  }
+
+  .cmpDiv {
+    max-width: 450px;
+  }
+
+  #polarAreaChart,
+  #barChart,
+  #doughnutChart {
+    width: 30vw !important;
+  }
+}

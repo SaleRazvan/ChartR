@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/general.css">
+<link rel="stylesheet" type="text/css" href="styles/country3.css">
+<meta content="width=device-width, initial-scale=1" name="screen" />
+<title> ChartR </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/transitionToPage.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="scripts/geoChart.js"></script>
+</head>
+
+<body>
+    
+    <main class="outerContainer">
+        <header>
+    
+            <div class="mobile">
+            <div class="mobileFlex">
+                <img src="imagini/burger2.png" class="burger" onclick="showMenu()">
+                <span onclick="transitionToPage('home.html')">Home</span>
+                <span onclick="transitionToPage('country5.html')">Learn</span>
+                <span onclick="transitionToPage('country1.html')">Explore</span>
+                <span onclick="transitionToPage('country2.html')">Compare</span>
+                <span onclick="transitionToPage('country4.html')">Currency</span>
+                <span onclick="transitionToPage('country3.html')">Metro</span>
+            </div>
+            </div>
+    
+            <div class="desktop">
+            <span onclick="transitionToPage('home.html')" class="home">Home</span>
+            <span onclick="transitionToPage('country5.html')" class="learn">Learn</span>
+            <span onclick="transitionToPage('country1.html')" class="explore">Explore</span>
+            <span onclick="transitionToPage('country2.html')" class="compare">Compare</span>
+            <span onclick="transitionToPage('country4.html')" class="currency">Currency</span>
+            <span onclick="transitionToPage('country3.html')" class="metro">Metro</span>
+            </div>
+        </header>
+
+    
+    <div class="flexRow">
+        <div class="flexText">
+          <h2>Largest metropolitan areas in the EU</h2>
+          <p>For detailed info about european metropolitan areas, please check the map presented on the right side of the page</p>
+          <h2>FAQ</h2>
+          <h3>What is a metropolitan area?</h3>
+          <p>A metropolitan area or metro is a region consisting of a densely populated urban core and its less-populated surrounding territories under the same administrative jurisdiction, sharing industries, commercial areas, transport network, infrastructures and housing.</p>
+          <h3>What does a metro host?</h3>
+          <p>Metropolitan areas include satellite cities, towns and intervening rural areas that are socioeconomically tied to the urban core, typically measured by commuting patterns.</p>
+          <h3>Can metropolitan areas build around multiple centers?</h3>
+          <p>Yes, in some cases metropolitan areas have multiple centers of close to equal importance, such as the Rhine-Ruhr in Germany and the Randstad in the Netherlands.</p>
+        </div>
+        <div class="flexMap">
+            <h3>Map of biggest european metros (Legend - GMP)</h3>
+            <div id="citiesDiv"></div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer"> ChartR team [Sale Razvan-Stelian & Andrei Grigor] @ 2021</div>
+    </footer>
+</div>
+</main>
+
+</body>
+<script>markActive("metro");</script>
+</html>

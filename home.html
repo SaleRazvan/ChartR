@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/general.css">
+<link rel="stylesheet" type="text/css" href="styles/home.css">
+<title> ChartR </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/transitionToPage.js"></script>
+</head>
+
+<body>
+    
+<main class="outerContainer">
+    <header>
+
+        <div class="mobile">
+        <div class="mobileFlex">
+            <img src="imagini/burger2.png" class="burger" onclick="showMenu()">
+            <span onclick="transitionToPage('home.html')">Home</span>
+            <span onclick="transitionToPage('country5.html')">Learn</span>
+            <span onclick="transitionToPage('country1.html')">Explore</span>
+            <span onclick="transitionToPage('country2.html')">Compare</span>
+            <span onclick="transitionToPage('country4.html')">Currency</span>
+            <span onclick="transitionToPage('country3.html')">Metro</span>
+        </div>
+        </div>
+
+        <div class="desktop">
+        <span onclick="transitionToPage('home.html')" class="home">Home</span>
+        <span onclick="transitionToPage('country5.html')" class="learn">Learn</span>
+        <span onclick="transitionToPage('country1.html')" class="explore">Explore</span>
+        <span onclick="transitionToPage('country2.html')" class="compare">Compare</span>
+        <span onclick="transitionToPage('country4.html')" class="currency">Currency</span>
+        <span onclick="transitionToPage('country3.html')" class="metro">Metro</span>
+        </div>
+    </header>
+
+    <div class="flexColumn">
+        <h2> --- Welcome ---</h2>
+        <h1>This is &lt; ChartR &gt;</h1>
+        <img class="homeWallpaper" src="imagini/homeWallpaper.png">
+        <h2>Educational platform for curious minds, seeking to present financial and economic data structured in readable, fashionable structures, with interactive charts.</h2> 
+        <h2>Notice: Currently, the page only covers data for the 27 EU countries.</h2>
+        <a href="https://github.com/Autumn-Internship/ChartR" target="_blank"> Visit our GitHub repo! </a>
+    </div>
+
+    <footer>
+        <div class="footer"> ChartR team [Sale Razvan-Stelian & Andrei Grigor] @ 2021</div>
+    </footer>
+</main>
+
+</body>
+<script>markActive("home");</script>
+</html>

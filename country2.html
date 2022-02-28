@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/general.css">
+<link rel="stylesheet" type="text/css" href="styles/country2.css">
+<title> ChartR </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="scripts/transitionToPage.js"></script>
+<script src="scripts/generalTransition.js"></script>
+</head>
+
+<body>
+    
+    <main class="outerContainer">
+        <header>
+    
+            <div class="mobile">
+            <div class="mobileFlex" style="height: 85vh;">
+                <img src="imagini/burger2.png" class="burger" onclick="showMenu()">
+                <span onclick="transitionToPage('home.html')">Home</span>
+                <span onclick="transitionToPage('country5.html')">Learn</span>
+                <span onclick="transitionToPage('country1.html')">Explore</span>
+                <span onclick="transitionToPage('country2.html')">Compare</span>
+                <span onclick="transitionToPage('country4.html')">Currency</span>
+                <span onclick="transitionToPage('country3.html')">Metro</span>
+            </div>
+            </div>
+    
+            <div class="desktop">
+            <span onclick="transitionToPage('home.html')" class="home">Home</span>
+            <span onclick="transitionToPage('country5.html')" class="learn">Learn</span>
+            <span onclick="transitionToPage('country1.html')" class="explore">Explore</span>
+            <span onclick="transitionToPage('country2.html')" class="compare">Compare</span>
+            <span onclick="transitionToPage('country4.html')" class="currency">Currency</span>
+            <span onclick="transitionToPage('country3.html')" class="metro">Metro</span>
+            </div>
+        </header>
+
+    <div class="firstComparison">
+        <div class="flexRow1">
+            <img src="imagini/lArrow.png" class="arrow">
+                <div class="flexColumn">
+                    <h2>Select first country</h2>
+                    <select name="country1" id="country1">
+                        <option value="Germany" selected>Germany</option>
+                        <option value="France">France</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Finland">Finland</option>
+                        <option value="CzechRepublic">Czech Republic</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Malta">Malta</option>
+                    </select>
+
+
+                    <h2>Select second country</h2>
+                    <select name="country2" id="country2">
+                        <option value="Germany">Germany</option>
+                        <option value="France" selected>France</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Finland">Finland</option>
+                        <option value="CzechRepublic">Czech Republic</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Malta">Malta</option>
+                    </select>
+                </form>
+                 <button id="compareButton" onclick="generateRadarChart()">GENERATE</button>
+                </div>
+             <div class="radarChart">
+                 <canvas id="radarChart"></canvas>
+             </div>
+            <img src="imagini/rArrow.png" class="arrow" onclick="next('firstComparison', 'secondComparison'); generatePolarAreaChart();">
+    </div>
+
+    </div>
+
+    <div class="secondComparison">
+            <img src="imagini/lArrow.png" class="arrow" onclick="prev('secondComparison', 'firstComparison')">
+                    <div>
+                    <h2>Highest-paid folk in the EU (Monthly $)</h2>
+                    <div class="cmpDiv" >
+                        <canvas id="polarAreaChart"></canvas>
+                    </div>
+                    </div>
+            <img src="imagini/rArrow.png" class="arrow" onclick="next('secondComparison', 'thirdComparison'); generateBarChart();">
+    </div>
+        
+
+    <div class="thirdComparison">
+            <img src="imagini/lArrow.png" class="arrow" onclick="prev('thirdComparison', 'secondComparison')">           
+                <div>
+                    <h2>Largest economies of the EU (Trillion $)</h2>
+                    <div class="cmpDiv" >
+                        <canvas id="barChart"></canvas>
+                    </div>
+            </div>
+            <img src="imagini/rArrow.png" class="arrow" onclick="next('thirdComparison', 'fourthComparison'); generateDoughnutChart()">
+    </div>
+
+     <div class="fourthComparison">
+        <img src="imagini/lArrow.png" class="arrow" onclick="prev('fourthComparison', 'thirdComparison')">
+            <div>
+                <h2>Biggest exports in the EU (Trillion $)</h2>
+                <div class="cmpDiv">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+        <img src="imagini/rArrow.png" class="arrow" >
+     </div>
+
+<footer>
+    <div style="text-align: center;" class="footer"> ChartR team [Sale Razvan-Stelian & Andrei Grigor] @ 2021</div>
+</footer>
+</main>
+
+</body>
+<script src="scripts/generateRadarChart.js"></script>
+<script src="scripts/generateBarChart.js"></script>
+<script src="scripts/generatePolarAreaChart.js"></script>
+<script src="scripts/generateDoughnutChart.js"></script>
+<script>markActive("compare");</script>
+</html>

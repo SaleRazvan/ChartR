@@ -1,0 +1,148 @@
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 88%;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+}
+
+.flexInfo,
+.flexInfo2 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.flexInfoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Federo";
+  font-size: 4vh;
+  color: firebrick;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.75vh;
+  font-weight: normal;
+  margin: 1% 7.5%;
+}
+
+.flag {
+  width: auto;
+  height: 12.5vh;
+  outline: 0.225vh solid black;
+}
+
+.image {
+  height: 52.5vh;
+  width: 40vw;
+  align-self: center;
+  outline: 0.4vh solid black;
+}
+
+.image:hover,
+.flag:hover {
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4), 0 20px 60px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.arrow {
+  width: 2.25vw;
+  height: auto;
+  align-self: center;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  transform: scale(1.25);
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1299px) {
+  .flexRow {
+    height: 86.5%;
+  }
+  .outerContainer {
+    height: 60%;
+  }
+  h1 {
+    font-size: 3vh;
+  }
+
+  h2 {
+    font-size: 1.4vh;
+    margin: 1% 5%;
+  }
+
+  .flag {
+    width: auto;
+    height: 8vh;
+  }
+
+  .image {
+    height: 27.5vh;
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .outerContainer {
+    height: 90%;
+    width: 85%;
+  }
+  .flexRow {
+    flex-direction: column;
+    height: 100%;
+  }
+  .flexColumn {
+    height: 40%;
+    width: 90%;
+  }
+  .flexInfoRow {
+    gap: 10vw;
+    width: 100%;
+  }
+  .arrow {
+    margin: 0;
+    width: 7.5vw;
+  }
+  .image {
+    height: 20vh;
+    width: 60vw;
+    outline: 0.25vh solid black;
+  }
+  h1 {
+    font-size: 2.5vh;
+  }
+
+  h2 {
+    font-size: 1.4vh;
+    margin: 0;
+  }
+  .flag {
+    height: 8vh;
+  }
+  .footer {
+    font-size: 1.3vh;
+  }
+  header .mobileFlex {
+    height: 90vh;
+  }
+}

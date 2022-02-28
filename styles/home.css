@@ -1,0 +1,73 @@
+.homeWallpaper {
+  height: 25vh;
+  width: auto;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+}
+
+.flexColumn h1 {
+  font-size: 5vh;
+  font-family: "Federo";
+  color: royalblue;
+}
+
+.flexColumn h2 {
+  font-size: 2vh;
+  font-family: "Federo";
+  text-align: center;
+}
+
+.flexColumn a {
+  font-size: 2vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: whitesmoke;
+  padding: 2vh 2vw;
+  outline: 0.2vh solid black;
+  background-color: royalblue;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 2%;
+}
+
+.flexColumn a:hover {
+  box-shadow: 0 16px 20px 0 rgba(0, 0, 0, 0.4), 0 20px 60px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .flexColumn {
+    gap: 2.5vh;
+  }
+  .flexColumn h1 {
+    font-size: 3vh;
+  }
+  .flexColumn h2 {
+    font-size: 1.5vh;
+    width: 85%;
+    margin: 0;
+  }
+  .flexColumn {
+    height: 95%;
+  }
+  .homeWallpaper {
+    height: 20vh;
+  }
+  .outerContainer {
+    height: 65%;
+  }
+  .flexColumn a {
+    font-size: 1.6vh;
+  }
+  .footer {
+    font-size: 1.3vh;
+  }
+}

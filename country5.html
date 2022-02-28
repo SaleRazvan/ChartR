@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/general.css">
+<link rel="stylesheet" type="text/css" href="styles/country5.css">
+<title> ChartR </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/transitionToPage.js"></script>
+<script src="scripts/generalTransition.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="scripts/learnGINI.js"></script>
+<script src="scripts/learnGDP.js"></script>
+<script src="scripts/learnHDI.js"></script>
+<script src="scripts/learnEXTDEB.js"></script>
+<script src="scripts/leanEXP.js"></script>
+</head>
+
+<body>
+    
+    <main class="outerContainer">
+        <header>
+    
+            <div class="mobile">
+            <div class="mobileFlex">
+                <img src="imagini/burger2.png" class="burger" onclick="showMenu()">
+                <span onclick="transitionToPage('home.html')">Home</span>
+                <span onclick="transitionToPage('country5.html')">Learn</span>
+                <span onclick="transitionToPage('country1.html')">Explore</span>
+                <span onclick="transitionToPage('country2.html')">Compare</span>
+                <span onclick="transitionToPage('country4.html')">Currency</span>
+                <span onclick="transitionToPage('country3.html')">Metro</span>
+            </div>
+            </div>
+    
+            <div class="desktop">
+            <span onclick="transitionToPage('home.html')" class="home">Home</span>
+            <span onclick="transitionToPage('country5.html')" class="learn">Learn</span>
+            <span onclick="transitionToPage('country1.html')" class="explore">Explore</span>
+            <span onclick="transitionToPage('country2.html')" class="compare">Compare</span>
+            <span onclick="transitionToPage('country4.html')" class="currency">Currency</span>
+            <span onclick="transitionToPage('country3.html')" class="metro">Metro</span>
+            </div>
+        </header>
+
+    <div class="GINI flexRow">
+        <img src="imagini/lArrow.png" class="arrow">
+    <div class="flexText">
+        <h2>GINI Coefficient</h2>
+        <h3>What is Gini?</h3>
+        <p>In economics, the Gini coefficient is a measure of statistical dispersion intended to represent the income inequality or the wealth inequality within a nation or a social group. The Gini coefficient was developed by the statistician and sociologist Corrado Gini.</p>
+        <h3>Interpreting the values</h3>
+        <p>A Gini coefficient of zero expresses perfect equality, where all values are the same (for example, where everyone has the same income). A Gini coefficient of one (or 100%) expresses maximal inequality among values (e.g., for a large number of people where only one person has all the income or consumption and all others have none, the Gini coefficient will be nearly one).</p>
+        <h3>Limitations</h3>
+        <p>The Gini coefficient is a relative measure. It is possible for the Gini coefficient of a developing country to rise (due to increasing inequality of income) while the number of people in absolute poverty decreases.This is because the Gini coefficient measures relative, not absolute, wealth.</p>
+    </div>
+
+        <div class="flexMap">
+            <h3>GINI map of EU</h3>
+           <div id="learnGINI"></div>
+        </div>
+
+    <img src="imagini/rArrow.png" class="arrow" onclick="next('GINI', 'GDP'); fetchGDP()">
+    </div>
+<!-- start of section (shows on the entire page) -->
+    <div class="GDP flexRow"> 
+        <img src="imagini/lArrow.png" class="arrow" onclick="prev('GDP', 'GINI')">
+    <div class="flexText">
+        <h2>GDP (PPP)</h2>
+        <h3>What is GDP?</h3>
+        <p>Gross domestic product (GDP) is a monetary measure of the market value of all the final goods and services produced in a specific time period.</p>
+        <h3>Difference between Nominal and PPP?</h3>
+        <p>GDP comparisons using PPP are arguably more useful than those using nominal GDP when assessing a nation's domestic market because PPP takes into account the relative cost of local goods, services and inflation rates of the country, rather than using international market exchange rates, which may distort the real differences in per capita income.</p>
+        <h3>Limitations</h3>
+        <p>Critics of the growth imperative often argue that GDP measures were never intended to measure progress, and leave out key other externalities, such as resource extraction, environmental impact and unpaid domestic work.</p>
+    </div>
+
+        <div class="flexMap">
+            <h3>GDP per Capita (PPP) map of EU</h3>
+           <div id="learnGDP"></div>
+        </div>
+
+        <img src="imagini/rArrow.png" class="arrow" onclick="next('GDP', 'HDI'); fetchHDI()">
+</div>
+<!-- end of section (shows on the entire page) -->
+    <div class="HDI flexRow">
+        <img src="imagini/lArrow.png" class="arrow" onclick="prev('HDI', 'GDP')">
+    <div class="flexText">
+        <h2>HDI</h2>
+        <h3>What is HDI?</h3>
+        <p>HDI (Human Development Index) was created to emphasize that people and their capabilities should be the ultimate criteria for assessing the development of a country, not economic growth alone.</p>
+        <h3>What does HDI actually mean</h3>
+        <p>A country scores a higher HDI when the lifespan is higher, the education level is higher, and the gross national income GNI (PPP) per capita is higher.</p>
+        <h3>Limitations</h3>
+        <p>The index does not take into account several factors, such as the net wealth per capita or the relative quality of goods in a country. This situation tends to lower the ranking for some of the most advanced countries.</p>
+    </div>
+
+        <div class="flexMap">
+            <h3>HDI map of EU</h3>
+           <div id="learnHDI"></div>
+        </div>    
+
+        <img src="imagini/rArrow.png" class="arrow" onclick="next('HDI', 'EXTDEB'); fetchExtDebt()">
+    </div>
+
+    <div class="EXTDEB flexRow">
+        <img src="imagini/lArrow.png" class="arrow" onclick="prev('EXTDEB', 'HDI')">
+    <div class="flexText">
+        <h2>External Debts</h2>
+        <h3>What is External Debt?</h3>
+        <p>In public finance, external debt (or foreign debt) is the component of the total government debt which is owed to foreign creditors; its complement is internal debt, which is owed to domestic lenders. The debtors can be the government, corporations or citizens of that country.</p>
+        <h3>What external debts include?</h3>
+        <p>The debt includes money owed to private commercial banks, foreign governments, or international financial institutions such as the International Monetary Fund (IMF) and World Bank. Note that the use of gross-liability figures greatly distorts the ratio for countries which contain major money-centers.</p>
+        <h3>Relation with the currencies</h3>
+        <p>The external debt is irrelevant to the underlying currency. The state debt is split between debt denominated in the national currency and debt denominated in any foreign currency.</p>
+    </div>
+
+        <div class="flexMap">
+            <h3>External debt map of EU</h3>
+           <div id="learnEXTDEB"></div>
+        </div>    
+
+        <img src="imagini/rArrow.png" class="arrow" onclick="next('EXTDEB', 'EXP'); fetchExport()">
+    </div>
+
+<div class="EXP flexRow">
+    <img src="imagini/lArrow.png" class="arrow" onclick="prev('EXP', 'EXTDEB')">
+    <div class="flexText">
+        <h2>Exports</h2>
+        <h3>What is considered Export?</h3>
+        <p>An export in international trade is a good produced in one country that is sold into another country or a service provided in one country for a national or resident of another country.</p>
+        <h3>The Exporter and the Importer</h3>
+        <p>The seller of such goods or the service provider is an exporter; the foreign buyer is an importer. Services that figure in international trade include financial, accounting and other professional services, tourism, education as well as intellectual property rights.</p>
+      </div>
+
+        <div class="flexMap">
+            <h3>Export map of EU</h3>
+           <div id="learnEXP"></div>
+        </div>
+        <img src="imagini/rArrow.png" class="arrow">
+</div>
+
+<footer>
+    <div class="footer"> ChartR team [Sale Razvan-Stelian & Andrei Grigor] @ 2021</div>
+</footer>
+</div>
+</main>
+
+</body>
+<script>markActive("learn");</script>
+</html>

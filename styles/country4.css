@@ -1,0 +1,143 @@
+:root {
+  --usedFont: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.outerContainer {
+  height: 85%;
+}
+
+h1 {
+  font-size: 2vh;
+  font-family: var(--usedFont);
+}
+
+#cmpForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+select {
+  width: 100%;
+  font-family: inherit;
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid lightgray;
+  border-radius: 0.25em;
+  font-size: 1.15rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+#plotBtn {
+  align-items: center;
+  appearance: none;
+  background-color: #3eb2fd;
+  background-image: linear-gradient(1deg, #4f58fd, #149bf3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s, background-position 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+#plotBtn :hover {
+  background-position: -20px -20px;
+}
+
+#plotBtn:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 0.125em;
+}
+
+.currentValuesChart {
+  max-width: 60vw;
+  max-height: 25vh;
+}
+
+#graphDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 55vh;
+  max-width: 75vw;
+}
+
+.topOfCmp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#notePar {
+  font-family: var(--usedFont);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5vh;
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .topOfCmp {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: 45%;
+    margin-top: 7vh;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1029px) {
+  .outerContainer {
+    height: 90%;
+  }
+  .topOfCmp {
+    flex-direction: column-reverse;
+  }
+  #graphDiv {
+    margin-top: 25px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  #CmpChart {
+    margin-left: 10vw !important;
+  }
+}
+
+/*Large devices (desktops, 992px and up) */
+@media (min-width: 1030px) and (max-width: 1440px) {
+  .outerContainer {
+    height: 65%;
+  }
+  .topOfCmp {
+    flex-flow: row;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
